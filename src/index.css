@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f3f4f6 0%, #ffffff 100%);
+  min-height: 100vh;
+}
+
+/* Scroll animations */
+.scroll-fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.scroll-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+/* Custom component styles */
+.swot-card {
+  @apply rounded-lg shadow-md hover:shadow-lg transition-all duration-300;
+}
+
+.swot-card-strength {
+  @apply border-l-4 border-swot-strength;
+}
+
+.swot-card-weakness {
+  @apply border-l-4 border-swot-weakness;
+}
+
+.swot-card-opportunity {
+  @apply border-l-4 border-swot-opportunity;
+}
+
+.swot-card-threat {
+  @apply border-l-4 border-swot-threat;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300;
+}
+
+.btn-primary:active {
+  @apply scale-95;
+}
